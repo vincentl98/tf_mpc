@@ -1,6 +1,6 @@
 # tf_mpc
 
-A basic 2-parties MPC sum implementation. 
+A basic MPC sum implementation. 
 
 ## Introduction
 
