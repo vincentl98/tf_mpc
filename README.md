@@ -7,7 +7,7 @@ A basic MPC sum implementation.
 This project aims at achieving a secured sum of 
 two secret values. 
 
-### Implementation strategy
+### Problem
 
 Let's assume two parties _Alice_ and _Stephanie_ 
 both holds a __secret value__, respectively `a` and `s`. 
@@ -17,6 +17,8 @@ ie. `a + s`.
 While _Alice_ and _Stephanie_ agree on sharing with
 _Bob_ the sum of their respective values, they __do not
 want to disclose the individual value__ of their secret.
+
+### Implementation strategy
 
 The idea behind this implementation is the __generation
 of randomness__: let's assume, without loss of generality,
@@ -56,10 +58,14 @@ are done using __Tensorflow__.
 
 ## Usage
 
-```bash
-./run.sh
-```
-
-_Note:_ this basic example sums two secrets contained
+This basic example sums two secrets contained
 in files `slave.py` and `slave_leader.py` and 
 prints it.
+
+```bash
+python slave.py &
+python slave_leader.py &
+python master.py
+```
+
+
