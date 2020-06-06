@@ -57,7 +57,9 @@ are done using __Tensorflow__.
 ## Usage
 
 ```bash
-./run.sh
+python slave.py &
+python slave_leader.py &
+python master.py
 ```
 
 _Note:_ this basic example sums two secrets contained
